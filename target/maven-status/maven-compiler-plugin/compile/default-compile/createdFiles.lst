@@ -1,6 +1,0 @@
-com/pdfsummarizer/controller/HomeController.class
-com/pdfsummarizer/controller/PdfController.class
-com/pdfsummarizer/model/PdfRequest.class
-com/pdfsummarizer/PdfSummarizerApplication.class
-com/pdfsummarizer/service/PdfService.class
-com/pdfsummarizer/controller/PdfController$SentenceScore.class
