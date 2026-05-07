@@ -1,69 +1,168 @@
-Mahij Gosai
-
 # PDF Summarizer
 
-A Java-based web application for summarizing content from PDF documents using Spring Boot.
+A full-stack Java web application that extracts and summarizes text from uploaded PDF documents using Spring Boot and Thymeleaf. The project provides a clean UI for uploading files and viewing summarized content directly in the browser.
+
+## Live Demo
+
+Live Application: https://pdf-summarizer-nmxn.onrender.com
+
+---
 
 ## Features
 
-- Upload a PDF file
-- Automatically extract and summarize the content
-- View the summarized text via a clean web interface
+- Upload PDF documents through a web interface
+- Extract text content from PDF files
+- Generate concise summaries from uploaded documents
+- Responsive and clean frontend using Thymeleaf + Bootstrap
+- Dockerized deployment for cloud hosting
+- Deployed publicly on Render
 
-## Technologies Used
+---
 
-- Java 11+
+## Tech Stack
+
+### Backend
+- Java 17
 - Spring Boot
 - Maven
-- Thymeleaf (for HTML templates)
 
-## Project Structure
+### Frontend
+- Thymeleaf
+- HTML5
+- Bootstrap 5
 
-```
+### Deployment & DevOps
+- Docker
+- Render
+- Git & GitHub
+
+### PDF Processing
+- Apache PDFBox
+
+---
+
+## Project Architecture
+
+```plaintext
 pdf-summarizer/
+│
 ├── src/
 │   ├── main/
-│   │   ├── java/com/
-│   │   │   ├── controller/         # Handles web requests
-│   │   │   ├── model/              # PDF request data model
-│   │   │   ├── service/            # Summarization logic
-│   │   │   └── pdfsummarizer/      # Spring Boot application entry
+│   │   ├── java/com/pdfsummarizer/
+│   │   │   ├── controller/
+│   │   │   ├── model/
+│   │   │   ├── service/
+│   │   │   └── PdfSummarizerApplication.java
+│   │   │
 │   │   └── resources/
-│   │       ├── templates/          # HTML templates (index, result)
+│   │       ├── templates/
 │   │       └── application.properties
-├── pom.xml                         # Maven configuration
+│
+├── Dockerfile
+├── pom.xml
+└── README.md
 ```
 
-## How to Run
 
-1. **Clone the repository**
+---
 
-   ```bash
-   git clone <repository-url>
-   cd pdf-summarizer
-   ```
+## Installation & Local Setup
 
-2. **Build the project**
+### 1. Clone Repository
 
-   ```bash
-   mvn clean install
-   ```
+```bash
+git clone https://github.com/Preeti080204/pdf-summarizer.git
+cd pdf-summarizer
+```
 
-3. **Run the application**
+---
 
-   ```bash
-   mvn spring-boot:run
-   ```
+### 2. Run the Application
 
-4. **Access the web interface**
+#### Using Maven
 
-   Open your browser and navigate to `http://localhost:8080`
+```bash
+mvn clean package
+mvn spring-boot:run
+```
 
-## Notes
+#### OR Using JAR
 
-- Ensure you have Java and Maven installed on your system.
-- PDF processing and summarization logic is handled in `PdfService.java`.
+```bash
+java -jar target/*.jar
+```
 
-## License
+---
 
-This project is licensed under the MIT License.
+### 3. Open in Browser
+
+```plaintext
+http://localhost:8080
+```
+
+---
+
+## Docker Setup
+
+### Build Docker Image
+
+```bash
+docker build -t pdf-summarizer .
+```
+
+### Run Docker Container
+
+```bash
+docker run -p 8080:8080 pdf-summarizer
+```
+
+---
+
+## Deployment
+
+The application is deployed using:
+
+- Docker
+- Render Cloud Platform
+
+Live URL:
+
+https://pdf-summarizer-nmxn.onrender.com
+
+---
+
+## Future Improvements
+
+- AI-powered summarization using OpenAI/Gemini APIs
+- Authentication & user accounts
+- Summary history tracking
+- Drag & drop PDF uploads
+- Multi-language summarization
+- PDF preview support
+- Export summarized text
+
+---
+
+## Learning Outcomes
+
+This project helped strengthen understanding of:
+
+- Spring Boot architecture
+- MVC pattern
+- File handling in Java
+- Docker containerization
+- Cloud deployment workflows
+- Git/GitHub version control
+- Backend + frontend integration
+
+---
+
+## Author
+
+### Preeti Gorial
+
+- GitHub: https://github.com/Preeti080204
+
+
+---
+
